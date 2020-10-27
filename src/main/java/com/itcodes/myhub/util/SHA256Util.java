@@ -51,7 +51,7 @@ public class SHA256Util {
         try {
             KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance(ALGORITHM);
             //密钥大小:512/768/1024
-            keyPairGen.initialize(1024);
+            keyPairGen.initialize(512);
             return keyPairGen.generateKeyPair();
         } catch (NoSuchAlgorithmException e) {
             throw new SuException("初始化密钥异常", e);
